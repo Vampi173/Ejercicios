@@ -1,0 +1,42 @@
+package ejercicio;
+
+import java.util.Scanner;
+
+public class juego {
+
+	public static void main(String[] args) {
+		
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("Ingresa tu opcion...\n1.-Piedra\n2.-Papel\n3.-Tijeras");
+		int opcion = teclado.nextInt();
+		
+		int compu = (int)(Math.random() * 3) +1;
+
+		switch (opcion) {
+		case 1:
+			System.out.println("Fue piedra");
+			switch (compu) {
+				case 1: System.out.println("Empate"); break;
+				case 2: System.out.println("Perdiste"); break;
+				case 3: System.out.println("Ganaste"); break;
+			}
+			break;
+		case 2:
+			System.out.println("Fue papel");
+			switch (compu) {
+				case 1: System.out.println("Ganaste"); break;
+				case 2: System.out.println("Empate"); break;
+				case 3: System.out.println("Perdiste"); break;
+			}
+			break;			
+		case 3:
+			System.out.println("Fue tijeras");
+			switch (compu) {
+				case 1: System.out.println("Ganaste"); break;
+				case 2: System.out.println("Perdiste"); break;
+				case 3: System.out.println("Empate"); break;
+			}
+			break;
+		}
+	}
+}
